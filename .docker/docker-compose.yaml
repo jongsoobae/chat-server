@@ -3,8 +3,6 @@ services:
   app:
     build:
       context: ../
-    volumes:
-      - ../:/app
 #   db:
 #     image: postgres:14.3
 #     container_name: js_postgres

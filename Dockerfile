@@ -13,6 +13,7 @@ FROM python:3.9.10-slim-buster as app
 COPY --from=builder /usr/local/bin/ /usr/local/bin/
 COPY --from=builder /usr/local/lib/ /usr/local/lib/
 
+COPY . /app
 WORKDIR /app
 
 ENTRYPOINT uvicorn main:app --reload
