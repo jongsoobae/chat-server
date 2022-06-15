@@ -1,0 +1,37 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: ../
+    volumes:
+      - ../:/app
+#   db:
+#     image: postgres:14.3
+#     container_name: js_postgres
+#     environment:
+#       POSTGRES_USER: heumtax_dev
+#       POSTGRES_PASSWORD: "1234567890"
+#       POSTGRES_DB: "heum_transaction"
+#     healthcheck:
+#       test: ["CMD-SHELL", "pg_isready -U heumtax_dev"]
+#       interval: 30s
+#       timeout: 5s
+#       retries: 5
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data
+#     ports:
+#       - 15432:5432
+#     restart: unless-stopped
+#     stdin_open: true
+#     tty: true
+#   redis:
+#     image: redis:latest
+#     container_name: js_redis
+#     ports:
+#       - 16379:6379
+#     restart: unless-stopped
+#     stdin_open: true
+#     tty: true
+# volumes:
+#   postgres_data:
+
