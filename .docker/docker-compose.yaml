@@ -16,7 +16,7 @@ services:
       timeout: 5s
       retries: 5
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data2:/var/lib/postgresql/data
     ports:
       - 5432:5432
     restart: unless-stopped
@@ -31,5 +31,5 @@ services:
     stdin_open: true
     tty: true
 volumes:
-  postgres_data:
+  postgres_data2:
 
